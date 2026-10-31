@@ -1,0 +1,115 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "2227057182/moonbit-dsp"
+
+// Values
+pub fn alpha_from_cutoff(Double) -> Double
+
+pub fn apply_window(Array[Double], WindowType) -> Array[Double]
+
+pub fn autocorrelate(Array[Double]) -> Array[Double]
+
+pub fn blackman_window(Int32) -> Array[Double]
+
+pub fn butterworth_lowpass_2(Double) -> IirCoeffs2
+
+pub fn convolve(Array[Double], Array[Double]) -> Array[Double]
+
+pub fn correlate(Array[Double], Array[Double]) -> Array[Double]
+
+pub fn dft(Array[Double]) -> Array[Complex]
+
+pub fn dominant_frequency(Array[Double], Double) -> (Double, Double)
+
+pub fn energy(Array[Double]) -> Double
+
+pub fn fft(Array[Double]) -> Array[Complex]
+
+pub fn find_peaks(Array[Double]) -> Array[Int32]
+
+pub fn fir_filter(Array[Double], Array[Double]) -> Array[Double]
+
+pub fn fir_lowpass_coeffs(Double, Int32, WindowType) -> Array[Double]
+
+pub fn hamming_window(Int32) -> Array[Double]
+
+pub fn hann_window(Int32) -> Array[Double]
+
+pub fn iir_filter_2(Array[Double], IirCoeffs2) -> Array[Double]
+
+pub fn iir_lowpass_1(Array[Double], Double) -> Array[Double]
+
+pub fn is_power_of_two(Int32) -> Bool
+
+pub fn magnitude_spectrum(Array[Double]) -> Array[Double]
+
+pub fn max_abs(Array[Double]) -> Double
+
+pub fn mean(Array[Double]) -> Double
+
+pub fn next_power_of_two(Int32) -> Int32
+
+pub fn normalize(Array[Double]) -> Array[Double]
+
+pub fn pad_to_power_of_two(Array[Double]) -> Array[Double]
+
+pub fn power_spectrum(Array[Double]) -> Array[Double]
+
+pub fn rectangular_window(Int32) -> Array[Double]
+
+pub fn rms(Array[Double]) -> Double
+
+pub fn sawtooth_wave(Int32, Double, Double) -> Array[Double]
+
+pub fn sine_wave(Int32, Double, Double, phase? : Double) -> Array[Double]
+
+pub fn square_wave(Int32, Double, Double, duty? : Double) -> Array[Double]
+
+pub fn stddev(Array[Double], sample? : Bool) -> Double
+
+pub fn top_k(Array[Double], Int32) -> Array[(Int32, Double)]
+
+pub fn triangle_wave(Int32, Double, Double) -> Array[Double]
+
+pub fn variance(Array[Double], sample? : Bool) -> Double
+
+pub fn white_noise(Int32, UInt64) -> Array[Double]
+
+pub fn window(WindowType, Int32) -> Array[Double]
+
+// Errors
+
+// Types and methods
+pub struct Complex {
+  re : Double
+  im : Double
+}
+pub fn Complex::abs(Self) -> Double
+pub fn Complex::add(Self, Self) -> Self
+pub fn Complex::conj(Self) -> Self
+pub fn Complex::div(Self, Self) -> Self
+pub fn Complex::mul(Self, Self) -> Self
+pub fn Complex::new(Double, Double) -> Self
+pub fn Complex::one() -> Self
+pub fn Complex::phase(Self) -> Double
+pub fn Complex::scale(Self, Double) -> Self
+pub fn Complex::sub(Self, Self) -> Self
+pub fn Complex::zero() -> Self
+
+pub struct IirCoeffs2 {
+  b0 : Double
+  b1 : Double
+  b2 : Double
+  a1 : Double
+  a2 : Double
+}
+
+pub(all) enum WindowType {
+  Rectangular
+  Hann
+  Hamming
+  Blackman
+}
+
+// Type aliases
+
+// Traits
